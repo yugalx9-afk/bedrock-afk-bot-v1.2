@@ -1,0 +1,18 @@
+{
+  "name": "bedrock-server-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Configurable Minecraft Bedrock client with Microsoft authentication and lightweight dashboard",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "bedrock-protocol": "^3.56.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  }
+}

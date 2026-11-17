@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Bedrock Bot Dashboard</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div>
+        <p class="eyebrow">BEDROCK CLIENT</p>
+        <h1>Bot dashboard</h1>
+        <p class="sub">Connection monitor and controls</p>
+      </div>
+      <span id="pill" class="pill">LOADING</span>
+    </header>
+
+    <section class="hero panel">
+      <div>
+        <p class="muted">CURRENT STATUS</p>
+        <h2 id="status">Loading…</h2>
+        <p id="server" class="sub">—</p>
+      </div>
+      <div class="actions">
+        <button id="start">Start bot</button>
+        <button id="stop" class="secondary">Stop</button>
+        <button id="reconnect" class="secondary">Reconnect</button>
+      </div>
+    </section>
+
+    <section class="stats">
+      <article class="panel"><p class="muted">Session uptime</p><strong id="uptime">00:00:00</strong></article>
+      <article class="panel"><p class="muted">Reconnects</p><strong id="reconnects">0</strong></article>
+      <article class="panel"><p class="muted">Connection attempts</p><strong id="attempts">0</strong></article>
+    </section>
+
+    <section class="panel account">
+      <div><p class="muted">ACCOUNT</p><strong id="username">—</strong></div>
+      <div><p class="muted">AUTHENTICATION</p><strong>Microsoft / Xbox</strong></div>
+    </section>
+
+    <section id="login" class="panel login hidden">
+      <p class="eyebrow">MICROSOFT SIGN-IN REQUIRED</p>
+      <h3>Finish account login</h3>
+      <p id="loginMessage" class="sub">Open the Microsoft sign-in page and enter this code.</p>
+      <div class="code-row"><code id="userCode">—</code><button id="copyCode" class="secondary">Copy code</button></div>
+      <a id="verifyLink" href="https://www.microsoft.com/link" target="_blank" rel="noopener">Open Microsoft device login ↗</a>
+      <p class="muted tiny">Never share this code. It is only for signing in to your own Minecraft account.</p>
+    </section>
+
+    <section class="panel">
+      <div class="section-head"><div><p class="eyebrow">ACTIVITY</p><h3>Recent logs</h3></div><button id="clear" class="secondary small">Clear view</button></div>
+      <div id="logs" class="logs"><p class="muted">Waiting for logs…</p></div>
+    </section>
+    <footer>Keep your dashboard password private. Authentication cache is stored in the data directory.</footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>

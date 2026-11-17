@@ -1,0 +1,23 @@
+{
+  "server": {
+    "host": "YOUR_BEDROCK_SERVER_ADDRESS",
+    "port": 19132
+  },
+  "minecraft": {
+    "username": "",
+    "auth": "microsoft"
+  },
+  "bot": {
+    "autoReconnect": true,
+    "autoStart": false,
+    "reconnectMinMs": 5000,
+    "reconnectMaxMs": 60000
+  },
+  "dashboard": {
+    "port": 3000,
+    "host": "0.0.0.0"
+  },
+  "storage": {
+    "dataDirectory": "./data"
+  }
+}
